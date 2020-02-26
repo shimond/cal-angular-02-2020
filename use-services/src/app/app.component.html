@@ -1,0 +1,10 @@
+<div *ngIf="count$ | async as count">
+  Count in app Component {{count}}
+  <hr>
+  <app-counter></app-counter>
+  <hr>
+  <button (click)="changeVisibility()">Show more app-counter</button>
+  <hr>
+
+  <app-counter *ngIf="isShown"></app-counter>
+</div>
