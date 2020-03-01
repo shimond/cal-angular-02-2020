@@ -1,0 +1,20 @@
+<div class="container">
+    <div>
+        <app-question-list (questionSelected)="onQuestionSelected($event)"
+            [selectedQuestion]="selectedQuestion"
+            [questions]="allQuestions"></app-question-list>
+    </div>
+
+    <div>
+        <app-question-viewer (userAnswered)="onUserAnswered($event)"
+            *ngIf="selectedQuestion"
+            [question]="selectedQuestion"></app-question-viewer>
+    </div>
+
+    <div>
+        Your grade is : {{getGrade()}} %
+
+    </div>
+
+
+</div>

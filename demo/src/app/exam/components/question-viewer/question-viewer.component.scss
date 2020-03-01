@@ -1,0 +1,22 @@
+.viewer-container {
+    border-radius: 9px;
+    border: 1px solid black;
+    padding: 20px;
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .options {
+        button {
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 30px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

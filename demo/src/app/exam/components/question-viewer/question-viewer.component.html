@@ -1,0 +1,14 @@
+<div class="viewer-container">
+    <h2>{{question.text}}</h2>
+
+    <app-timer 
+    *ngIf="isTimerVisible" (timeOver)="onTimeOver()"
+    [limit]="limit"></app-timer>
+
+    <div class="options">
+        <div *ngFor="let op of question.option"
+            (click)="onOptionClick(op)">
+            <button [disabled]="isLocked()">{{op}}</button>
+        </div>
+    </div>
+</div>

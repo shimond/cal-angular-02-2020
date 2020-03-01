@@ -1,0 +1,10 @@
+<div>
+    <div class="qa-item "
+        *ngFor="let q of questions"
+        [class.correct]="isCorrect(q)"
+        [class.incorrect]="isIncorrect(q)"
+        [class.selected]="q === selectedQuestion"
+        (click)="selectQuestion(q)">
+        {{q.text}}
+    </div>
+</div>
