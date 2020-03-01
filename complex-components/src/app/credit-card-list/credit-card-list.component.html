@@ -1,0 +1,16 @@
+<div>
+    <div *ngFor="let card of cards"
+        class="card-item"
+        [class.selected-card]="card === selectedCard"
+        (click)="onCardClick(card)">
+        <div class="logo">
+            <app-credit-card-type-icon [cardType]="card.type">
+            </app-credit-card-type-icon>
+        </div>
+        <div class="details">
+            {{card.displayName}}
+            -
+            {{card.last4Digits}}
+        </div>
+    </div>
+</div>

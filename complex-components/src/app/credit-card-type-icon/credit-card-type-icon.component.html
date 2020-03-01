@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="cardType">
+    <img *ngSwitchCase="'MasterCard'"
+        src="/assets/mastercard.png" />
+    <img *ngSwitchCase="'Diners'"
+        src="/assets/diners.png" />
+    <img *ngSwitchCase="'Visa'"
+        src="/assets/visa.png" />
+</ng-container>

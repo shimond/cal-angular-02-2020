@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    .sidebar {
+        background-color: red;
+        grid-column: 1;
+    }
+
+    .content {
+        background-color: aquamarine;
+        grid-column: 2;
+    }
+
+}

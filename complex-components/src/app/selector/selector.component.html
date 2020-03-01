@@ -1,0 +1,13 @@
+<!-- <select (change)="onChanged($event.target.value)">
+    <option *ngFor="let option of options">{{option}}</option>
+</select> -->
+
+
+<div class="my-selected-wrapper">
+    <div 
+    *ngFor="let option of options" 
+    [class.item-selected]="option === selectedValue"
+    (click)="onChanged(option)">
+        {{option}}
+    </div>
+</div>

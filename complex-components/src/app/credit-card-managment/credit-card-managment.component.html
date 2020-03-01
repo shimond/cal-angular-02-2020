@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="sidebar">
+        <app-credit-card-list 
+            [cards]="creditCardList"
+            [selectedCard]="selectedCard"
+            (selectCardRequested)="onSelectCardRequested($event)"
+            ></app-credit-card-list>
+    </div>
+    <div class="content">
+            <app-credit-card-details [card]="selectedCard"
+            (actionTriggered)="onActionTriggered($event)"></app-credit-card-details>
+    </div>
+</div>

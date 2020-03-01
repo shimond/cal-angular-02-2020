@@ -1,0 +1,30 @@
+.card-item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 9px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+        background-color: coral;
+    }
+
+    &.selected-card {
+        background-color: aqua;
+    }
+
+    .logo {
+        align-self: flex-start;
+
+    }
+
+    .details {
+        align-self: center;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+}

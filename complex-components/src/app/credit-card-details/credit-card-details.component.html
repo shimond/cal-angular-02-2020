@@ -1,0 +1,25 @@
+<!-- <pre dir="ltr">{{card | json}}</pre> -->
+<div class="card-container">
+    <div>
+        <app-credit-card-type-icon [cardType]="card.type">
+        </app-credit-card-type-icon>
+    </div>
+
+    <h2>{{card.displayName | test : '?': 5}}</h2>
+
+    <div>
+        4 ספרות אחרונות:
+        {{card.last4Digits}}
+    </div>
+
+    <div>
+        תוקף:
+        {{card.expireDate | date:dateFormat}}
+    </div>
+
+    <div class="actions">
+        <button *ngFor="let action of getActionsByCard()"
+            (click)="onActionClicked(action)">{{action | test:'*':action.length}}</button>
+    </div>
+
+</div>
