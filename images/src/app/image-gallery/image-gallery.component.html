@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="big-image-container">
+        <img [src]="selectedPicUrl.url"
+            class="big-image" />
+    </div>
+    <div class="image-list">
+        <div *ngFor="let pic of urls">
+            <img [title]="pic.title"
+                [class.selected-pic]="pic === selectedPicUrl"
+                [src]="pic.url"
+                (click)="selectPic(pic)" />
+            <h3>{{pic.title}}</h3>
+        </div>
+
+    </div>
+
+</div>

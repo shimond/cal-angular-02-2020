@@ -1,0 +1,11 @@
+tbody {
+    tr {
+        cursor: pointer;
+    }
+}
+
+.selected-movie {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
