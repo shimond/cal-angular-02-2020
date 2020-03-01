@@ -1,0 +1,73 @@
+<div>
+    <form [formGroup]="personForm"
+        (ngSubmit)="save()">
+        <div>
+            Name:
+        </div>
+        <div>
+            <input type="text"
+                formControlName="name" />
+            <div *ngIf="">
+                {{personForm.controls.name.errors | json}}
+            </div>
+            <!-- <field-errors-viewer [errors]="personForm.controls.name.errors"></field-errors-viewer> -->
+        </div>
+
+        <div>
+            Email:
+        </div>
+        <div>
+            <input type="text"
+                formControlName="email" />
+        </div>
+
+        <div>
+            Age:
+        </div>
+        <div>
+            <input type="number"
+                formControlName="age" />
+            <div *ngIf="personForm.controls.age.errors">
+                {{personForm.controls.age.errors | json}}
+            </div>
+        </div>
+
+
+        <div>
+            Is Admin: <input type="checkbox"
+                formControlName="isAdmin" />
+        </div>
+        <hr>
+        <div *ngIf="personForm.errors">
+            {{personForm.errors | json}}
+            <hr>
+        </div>
+        <div>
+            <!--  -->
+            <button [disabled]="personForm.invalid" >Save</button>
+        </div>
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Object value</th>
+                    <th>Form value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>{{person|json}}</pre>
+                    </td>
+                    <td>
+                        <pre>{{personForm.value|json}}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

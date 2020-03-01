@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    .xy-item {
+        border-radius: 9px;
+        border: 1px solid black;
+        margin: 2px;
+        text-align: center;
+        font-size: 22px;
+        justify-content: center;
+    }
+}
